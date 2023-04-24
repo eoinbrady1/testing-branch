@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 5
 
     steps:
-    - uses: MeilCli/regex-match@v1.0.1
+    - uses: MeilCli/regex-match@v1.5.0
       id: issues
       with:
         regex_pattern: '([A-Z][A-Z0-9]+-[0-9]+)'
