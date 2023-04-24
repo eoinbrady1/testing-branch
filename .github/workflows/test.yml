@@ -1,4 +1,4 @@
-name: Testing regex GHA
+name: Testing Add release tag to JIRA ticket
 
 on: push
 
@@ -17,4 +17,4 @@ jobs:
         search_string: 'this is a test'
 
     - name: Close Stale Issues
-      uses: actions/stale@v4.1.1x
+      uses: actions/stale@v4.1.1
