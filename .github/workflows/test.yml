@@ -1,23 +1,24 @@
-name: Testing Insights - Node CI
+name: Testing aws action for ll-enterprise
 
 on: push
 
 jobs:
   test-regex:
-    name: Testing Insights - Node CI
+    name: Testing aws action for ll-enterprise
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
     steps:
-    - uses: DanielTamkin/HasLabel@v1.0.4
+    - uses: aws-actions/configure-aws-credentials@v2
       id: issues
       with:
         regex_pattern: '([A-Z][A-Z0-9]+-[0-9]+)'
         regex_option: te
         search_string: 'this is a test'
 
-    - name: HasLabel
-      uses: DanielTamkin/HasLabel@v1.0.4
+    - name: Configure AWS Credentials For GitHub Actions
+      uses: aws-actions/configure-aws-credentials@v2
+
 
 
 
