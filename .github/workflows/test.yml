@@ -1,4 +1,4 @@
-name: Testing regex match action original version
+name: Testing Close stale PR
 
 on: push
 
@@ -9,13 +9,14 @@ jobs:
     timeout-minutes: 5
 
     steps:
-    - uses: MeilCli/regex-match@v1.0.1
+    - uses: actions/stale@v4.1.1
       id: issues
       with:
         regex_pattern: '([A-Z][A-Z0-9]+-[0-9]+)'
         regex_option: te
         search_string: 'this is a test'
 
-    - name: regex match action
-      uses: MeilCli/regex-match@v1.0.1
+    - name: Close Stale Issues
+      uses: actions/stale@v4.1.1
+
 
