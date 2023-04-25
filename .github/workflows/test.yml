@@ -1,4 +1,4 @@
-name: Testing Add release tag to JIRA ticket
+name: Testing regex match action original version
 
 on: push
 
@@ -16,5 +16,6 @@ jobs:
         regex_option: te
         search_string: 'this is a test'
 
-    - name: Close Stale Issues
-      uses: actions/stale@v4.1.1
+    - name: regex match action
+      uses: MeilCli/regex-match@v1.0.1
+
