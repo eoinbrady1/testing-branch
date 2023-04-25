@@ -1,22 +1,23 @@
-name: Testing Close stale PR
+name: Testing Insights - Node CI
 
 on: push
 
 jobs:
   test-regex:
-    name: Testing Close stale PR
+    name: Testing Insights - Node CI
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
     steps:
-    - uses: actions/stale@v5.0.0
+    - uses: DanielTamkin/HasLabel@v1.0.4
       id: issues
       with:
         regex_pattern: '([A-Z][A-Z0-9]+-[0-9]+)'
         regex_option: te
         search_string: 'this is a test'
 
-    - name: Close Stale Issues
-      uses: actions/stale@v5.0.0
+    - name: HasLabel
+      uses: DanielTamkin/HasLabel@v1.0.4
+
 
 
