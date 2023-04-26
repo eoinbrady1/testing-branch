@@ -9,15 +9,16 @@ jobs:
     timeout-minutes: 5
 
     steps:
-    - uses: docker/build-push-action@v2
+    - uses: docker/setup-qemu-action@v2.1.0
       id: issues
       with:
         regex_pattern: '([A-Z][A-Z0-9]+-[0-9]+)'
         regex_option: te
         search_string: 'this is a test'
 
-    - name: Build and push
-      uses: docker/build-push-action@v2
+    - name: Docker Setup QEMU
+      uses: docker/setup-qemu-action@v2.1.0
+
 
 
 
