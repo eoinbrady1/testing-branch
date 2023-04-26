@@ -1,23 +1,23 @@
-name: Learnign locker1 test1
+name: docker fail
 
 on: push
 
 jobs:
   test-regex:
-    name: Learnign locker1 test1
+    name: docker fail
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: docker/setup-qemu-action@v1
       id: issues
       with:
         regex_pattern: '([A-Z][A-Z0-9]+-[0-9]+)'
         regex_option: te
         search_string: 'this is a test'
 
-    - name: Checkout repository
-      uses: actions/checkout@v3
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v1
 
 
 
