@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 5
 
     steps:
-    - uses: EndBug/add-and-commit@v7
+    - uses: EndBug/add-and-commit@v9.1.1
       id: issues
       with:
         regex_pattern: '([A-Z][A-Z0-9]+-[0-9]+)'
@@ -17,7 +17,7 @@ jobs:
         search_string: 'this is a test'
 
     - name: Add & Commit
-      uses: EndBug/add-and-commit@v7
+      uses: EndBug/add-and-commit@v9.1.1
 
 
 
