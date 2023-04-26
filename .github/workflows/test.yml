@@ -1,23 +1,24 @@
-name: Testing aws action for ll-enterprise
+name: Testing release for ecosystem
 
 on: push
 
 jobs:
   test-regex:
-    name: Testing aws action for ll-enterprise
+    name: Testing release for ecosystem
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
     steps:
-    - uses: aws-actions/configure-aws-credentials@v2
+    - uses: actions/checkout@v2
       id: issues
       with:
         regex_pattern: '([A-Z][A-Z0-9]+-[0-9]+)'
         regex_option: te
         search_string: 'this is a test'
 
-    - name: Configure AWS Credentials For GitHub Actions
-      uses: aws-actions/configure-aws-credentials@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+
 
 
 
