@@ -1,23 +1,23 @@
-name: Testing add-and-commit for insights
+name: Learnign locker1 test1
 
 on: push
 
 jobs:
   test-regex:
-    name: Testing add-and-commit for insights
+    name: Learnign locker1 test1
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
     steps:
-    - uses: EndBug/add-and-commit@v9.1.1
+    - uses: actions/checkout@v2
       id: issues
       with:
         regex_pattern: '([A-Z][A-Z0-9]+-[0-9]+)'
         regex_option: te
         search_string: 'this is a test'
 
-    - name: Add & Commit
-      uses: EndBug/add-and-commit@v9.1.1
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
 
 
